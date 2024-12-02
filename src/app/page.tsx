@@ -1,8 +1,5 @@
 "use client"
-import AnimatedSvg from "@/assets/svg/Logo";
 import MyAnimationComponent from "@/components/ui/myAnimation";
-import { div } from "motion/react-client";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
