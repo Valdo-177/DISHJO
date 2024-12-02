@@ -1,3 +1,4 @@
+"use cient"
 import Lottie from "lottie-react";
 import myAnimation from "@/assets/data_Text.json";
 import { useEffect, useState } from "react";
@@ -8,7 +9,10 @@ const MyAnimationComponent = ({ children }: { children: React.ReactElement }) =>
     const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
-        setIsClient(true); // Hacer que el código que depende del cliente se ejecute después de la carga
+        setTimeout(() => {
+            setIsClient(true);
+            setShow(false)
+        }, 5000);
     }, []);
 
     if (!isClient) {
@@ -17,8 +21,8 @@ const MyAnimationComponent = ({ children }: { children: React.ReactElement }) =>
 
     setTimeout(() => {
         setShow(false)
-    }, 2500);
-    
+    }, 2500);    
+
     return (
         <div>
             {show && <Lottie
