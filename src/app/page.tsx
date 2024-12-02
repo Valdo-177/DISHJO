@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 
 const DynamicHome = dynamic(() => import("@/pages/HomePages"), {
+  ssr: false,
   loading: () => <p>Loading...</p>,
 })
 
